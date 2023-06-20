@@ -8,8 +8,8 @@ export default function EmailIcon() {
         x="0px"
         y="0px"
         viewBox="0 0 330.001 330.001"
-        width={14}
-        height={14}
+        width={16}
+        height={16}
       >
         <g id="XMLID_348_">
           <path

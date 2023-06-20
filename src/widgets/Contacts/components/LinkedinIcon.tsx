@@ -8,8 +8,8 @@ export default function LinkedinIcon() {
         x="0px"
         y="0px"
         viewBox="0 0 260.366 260.366"
-        width={14}
-        height={14}
+        width={16}
+        height={16}
       >
         <g>
           <path

@@ -2,8 +2,8 @@ export default function TelegramIcon() {
   return (
     <div className="fill-slate-700 dark:fill-slate-100 group-hover:fill-red-500">
       <svg
-        width={14}
-        height={14}
+        width={17}
+        height={17}
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
       >

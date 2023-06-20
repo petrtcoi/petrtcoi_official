@@ -2,45 +2,51 @@ import Link from "next/link"
 import EmailIcon from "./components/EmailIcon"
 import LinkedinIcon from "./components/LinkedinIcon"
 import TelegramIcon from "./components/TelegramIcon"
+import GithubIcon from "./components/GithubIcon"
 
 export default function Contacts() {
   return (
-    <div className="mt-5 flex flex-col gap-1 text-slate-700 dark:text-slate-100 font-light dark:font-thin">
-      <div className="flex flex-row gap-4 items-center group">
-        {/* <div> */}
-        <TelegramIcon />
-        {/* </div> */}
+    <div
+      id="contacts"
+      className="mt-7"
+    >
+      <div className="mb-2 text-slate-500 dark:text-slate-400 font-light dark:font-thin">
+        contact me
+      </div>
+      <div className=" flex flex-row gap-6 text-slate-700 dark:text-slate-100 font-light dark:font-thin">
         <Link
           href="http://t.me/thepetrtcoi"
           target={"_blank"}
           rel="noreferrer"
           className="group"
         >
-          @thepetrtcoi
+          <TelegramIcon />
         </Link>
-      </div>
 
-      <div className="flex flex-row gap-4 items-center group">
-        <LinkedinIcon />
         <Link
           href="https://www.linkedin.com/in/petrtcoi/"
           target={"_blank"}
           rel="noreferrer"
-          className="peer"
+          className="group"
         >
-          /petrtcoi
+          <LinkedinIcon />
         </Link>
-      </div>
-      <div className="flex flex-row gap-4 items-center group">
-        <div className="mt-1">
-          <EmailIcon />
-        </div>
+
+        <Link
+          href="https://github.com/petrtcoi"
+          target={"_blank"}
+          rel="noreferrer"
+          className="group"
+        >
+          <GithubIcon />
+        </Link>
+
         <Link
           href="mailto:petrtcoi@gmail.com"
           target={"_blank"}
-          rel="noreferrer"
+          className="group"
         >
-          petrtcoi@gmail.com
+          <EmailIcon />
         </Link>
       </div>
     </div>
