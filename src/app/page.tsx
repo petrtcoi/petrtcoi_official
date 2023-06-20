@@ -20,7 +20,7 @@ export default function Home() {
           <Contacts />
         </div>
       </div>
-      <div className="w-[600px] mt-16 mx-auto">
+      <div className="max-w-[600px] mt-16 mx-auto">
         <Posts />
       </div>
       <div className="mt-[100px]" />
