@@ -11,6 +11,7 @@ export default function Bulb() {
         width={40}
         height={53}
         className="absolute bottom-10 left-0"
+        priority
       />
     </div>
   )
