@@ -7,7 +7,7 @@ export default function Bulb() {
       <Image
         src={BulbImage}
         alt="Bulb"
-        loading="lazy"
+        loading="eager"
         width={40}
         height={53}
         className="absolute bottom-10 left-0"

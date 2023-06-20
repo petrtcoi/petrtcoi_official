@@ -61,7 +61,7 @@ export default function HeroImage() {
         width={500}
         height={500}
         sizes="(max-width: 768px) 100vw, 400px"
-        className={illuminated ? "brightness-100" : "brightness-[25%]"}
+        className={illuminated ? "brightness-100" : "brightness-[25%] "}
       />
       {showBlub && <Bulb />}
     </div>
