@@ -1,7 +1,11 @@
 import Image from "next/image"
 import BulbImage from "./assets/bulb.png"
 
-export default function Bulb() {
+type Props = {
+  hide: boolean
+}
+
+export default function Bulb({ hide = false }: Props) {
   return (
     <div className="relative">
       <Image
@@ -12,6 +16,7 @@ export default function Bulb() {
         height={53}
         className="absolute bottom-10 left-0"
         priority
+        hidden={hide}
       />
     </div>
   )
