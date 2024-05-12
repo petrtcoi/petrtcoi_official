@@ -1,56 +1,56 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useReducer } from "react"
-import Image from "next/image"
-import { useAtom } from "jotai"
+import { useEffect, useReducer } from "react";
+import Image from "next/image";
+import { useAtom } from "jotai";
 
-import { darkModeAtom } from "@features/dark_mode"
+import { darkModeAtom } from "@features/dark_mode";
 
-import Bulb from "./components/Bulb"
-import MainImage from "./assets/main_icon.png"
+import Bulb from "./components/Bulb";
+import MainImage from "./assets/main_icon.png";
 
 /** Reducer */
 type ImageAction = {
-  type: "DarkModeHide" | "DarkModeShow" | "LightModeShow"
-}
+  type: "DarkModeHide" | "DarkModeShow" | "LightModeShow";
+};
 type ImageState = {
-  illuminated: boolean
-  showBlub: boolean
-}
+  illuminated: boolean;
+  showBlub: boolean;
+};
 function imageReducer(state: ImageState, action: ImageAction): ImageState {
-  const { type } = action
+  const { type } = action;
   switch (type) {
     case "DarkModeHide":
-      return { illuminated: false, showBlub: false }
+      return { illuminated: false, showBlub: false };
     case "DarkModeShow":
-      return { illuminated: true, showBlub: true }
+      return { illuminated: true, showBlub: true };
     case "LightModeShow":
-      return { illuminated: true, showBlub: false }
+      return { illuminated: true, showBlub: false };
     default:
-      return state
+      return state;
   }
 }
 
 export default function HeroImage() {
-  const [darkMode] = useAtom(darkModeAtom)
+  const [darkMode] = useAtom(darkModeAtom);
 
   const [{ illuminated, showBlub }, dispatch] = useReducer(imageReducer, {
     illuminated: false,
     showBlub: false,
-  })
+  });
 
   useEffect(() => {
     if (!darkMode) {
-      dispatch({ type: "LightModeShow" })
-      return
+      dispatch({ type: "LightModeShow" });
+      return;
     }
-    dispatch({ type: "DarkModeHide" })
+    dispatch({ type: "DarkModeHide" });
     const timer = setTimeout(() => {
-      dispatch({ type: "DarkModeShow" })
-    }, 1000)
+      dispatch({ type: "DarkModeShow" });
+    }, 1000);
 
-    return () => clearTimeout(timer)
-  }, [darkMode])
+    return () => clearTimeout(timer);
+  }, [darkMode]);
 
   return (
     <div className={"px-10 pt-0 md:pt-20 mx-auto relative"}>
@@ -65,5 +65,5 @@ export default function HeroImage() {
       />
       <Bulb hide={!showBlub} />
     </div>
-  )
+  );
 }
