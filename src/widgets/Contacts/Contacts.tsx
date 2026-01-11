@@ -40,7 +40,7 @@ export default function Contacts() {
 				</Link>
 
 				<Link
-					href='mailto:petrtsoimail@gmail.com'
+					href='mailto:petrt.online@gmail.com'
 					target={'_blank'}
 					className='group'
 				>
